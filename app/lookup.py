@@ -171,17 +171,27 @@ def get_con():
 
 @st.cache_data
 def get_geoms():
+    """Region geometries.
+
+    `wkt` is the full-precision polygon (used by overlay.py to mask raster
+    pixels — must stay accurate). `geom` is a *simplified* GeoJSON used only
+    for drawing on the map: we drop vertices below ~500 m which is invisible
+    at continent zoom and shrinks the serialized map HTML by ~10× on Cloud.
+    """
+    SIMPLIFY_TOL = 0.005  # ~500 m — invisible at zoom <= 7
     rows = get_con().execute(
         "SELECT nrm_region, state, geom_wkt FROM regions"
     ).fetchall()
-    return {
-        r[0]: {
-            "state": r[1],
-            "wkt": r[2],
-            "geom": mapping(shapely.wkt.loads(r[2])),
+    out = {}
+    for name, state, wkt in rows:
+        full = shapely.wkt.loads(wkt)
+        simple = full.simplify(SIMPLIFY_TOL, preserve_topology=True)
+        out[name] = {
+            "state": state,
+            "wkt": wkt,                      # full-precision (for raster mask)
+            "geom": mapping(simple),         # simplified (for map drawing)
         }
-        for r in rows
-    }
+    return out
 
 
 @st.cache_data

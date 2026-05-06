@@ -35,7 +35,7 @@ NORTH_AUS_BBOX = (113.0, -33.0, 154.0, -10.0)
 def render_overlay(
     region_geom_wkts: tuple[str, ...] = (),
     layers: tuple[tuple, ...] = (),
-    max_px: int = 1200,
+    max_px: int = 800,
 ) -> tuple[list[np.ndarray], list[list[float]]]:
     """Return (per_layer_rgbas, [[south, west], [north, east]]).
 
