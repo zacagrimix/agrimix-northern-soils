@@ -1,0 +1,9 @@
+# Pipeline-only dependencies — needed to rebuild the database from raw inputs
+# (scripts/01..08). Not required for running the deployed app.
+-r requirements.txt
+geopandas>=1.0
+xarray>=2024.0
+netCDF4>=1.7
+requests>=2.31
+pyarrow>=14.0
+openpyxl>=3.1

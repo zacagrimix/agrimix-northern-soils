@@ -1,0 +1,13 @@
+# Runtime dependencies for the Streamlit app (deployed to Streamlit Cloud).
+# Pipeline-only deps (xarray, netCDF4, geopandas, requests, openpyxl) are
+# listed in requirements-dev.txt — they're only needed if you rebuild from raw.
+duckdb>=1.0.0
+streamlit>=1.50
+folium>=0.20
+streamlit-folium>=0.27
+shapely>=2.0
+rasterio>=1.4
+numpy>=1.26
+pandas>=2.0
+pillow>=10.0
+branca>=0.8

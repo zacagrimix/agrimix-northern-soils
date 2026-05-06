@@ -1,0 +1,417 @@
+<metadata xml:lang="en"><Esri><CreaDate>20160222</CreaDate><CreaTime>15505200</CreaTime><ArcGISFormat>1.0</ArcGISFormat><ArcGISstyle>ISO 19139 Metadata Implementation Specification</ArcGISstyle><SyncOnce>FALSE</SyncOnce><DataProperties><itemProps><itemName Sync="TRUE">NRM_regions_2020</itemName><nativeExtBox><westBL Sync="TRUE">72.246195</westBL><eastBL Sync="TRUE">168.226179</eastBL><southBL Sync="TRUE">-55.173104</southBL><northBL Sync="TRUE">-9.187947</northBL><exTypeCode Sync="TRUE">1</exTypeCode></nativeExtBox><itemLocation><linkage Sync="TRUE">file://\\PCDOTE031382\D$\Projects\2020_NRM_Regions_revision\NRM_regions_2020.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><imsContentType export="False" Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize></itemProps><coordRef><type Sync="TRUE">Geographic</type><geogcsn Sync="TRUE">GCS_GDA_1994</geogcsn><csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits><peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/2.3.0'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_GDA_1994&amp;quot;,DATUM[&amp;quot;D_GDA_1994&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4283]]&lt;/WKT&gt;&lt;XOrigin&gt;-400&lt;/XOrigin&gt;&lt;YOrigin&gt;-400&lt;/YOrigin&gt;&lt;XYScale&gt;11258999068426.238&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.9831528411952133e-09&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4283&lt;/WKID&gt;&lt;LatestWKID&gt;4283&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml></coordRef></DataProperties><SyncDate>20201106</SyncDate><SyncTime>12001900</SyncTime><ModDate>20201106</ModDate><ModTime>12001900</ModTime><MetaID>{cce21d9b-dc76-4a01-952d-60299a3e8abb}</MetaID><PublishedDocID>122fd267-e687-4465-9f2a-229953faf7d0</PublishedDocID><scaleRange><minScale>150000000</minScale><maxScale>5000</maxScale></scaleRange><ArcGISProfile>ISO19139</ArcGISProfile></Esri><Department><whitespace date="2019-06-05 15:02">fixed</whitespace><mog2020 checkDate="20200626">distInfo/distributor/distorCont/rpOrgName,dataIdInfo/idCitation/citRespParty[1]/rpOrgName,dataIdInfo/idCitation/citRespParty[2]/rpOrgName,dataIdInfo/resConst[3]/LegConsts/othConsts,dataIdInfo/idPoC/rpOrgName,mdContact/rpOrgName</mog2020></Department><mdChar><CharSetCd value="004"/></mdChar><mdContact xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>NRM Programs Data Manager</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum><faxNum>02 6274 1666</faxNum></cntPhone><cntAddress addressType=""><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country><eMailAdd>nrmprograms.metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="007"/></role></mdContact><mdStanName>ANZLIC Metadata Profile: An Australian/New Zealand Profile of AS/NZS ISO 19115:2005, Geographic information - Metadata</mdStanName><mdStanVer>1.1</mdStanVer><distInfo xmlns=""><distributor xmlns=""><distorCont xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum><faxNum>02 6274 1666</faxNum></cntPhone><cntAddress addressType="postal"><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>AU</country><eMailAdd>nrmprograms.metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes xmlns=""><linkage>http://www.environment.gov.au/fed</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="005"/></role><rpIndName>NRM Data Manager</rpIndName><rpPosName>NRM Data Manager</rpPosName></distorCont><distorFormat xmlns=""><formatName>Shapefile</formatName><formatVer>1</formatVer></distorFormat><distorTran xmlns=""><onLineSrc xmlns=""><linkage>http://www.environment.gov.au/fed</linkage><orDesc>002</orDesc><orFunct><OnFunctCd value="001"/></orFunct></onLineSrc></distorTran></distributor><distFormat xmlns=""><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><dataIdInfo><dsFormat xmlns=""><formatVer>1</formatVer></dsFormat><resMaint xmlns=""><maintFreq><MaintFreqCd value="009"/></maintFreq></resMaint><dataExr><geoEle><GeoBndBox><exTypeCode>1</exTypeCode></GeoBndBox></geoEle></dataExr><searchKeys><keyword>BOUNDARIES Administrative_Conservation</keyword><keyword>BOUNDARIES Administrative_Management</keyword></searchKeys><idCitation xmlns=""><resTitle Sync="FALSE">Natural Resource Management (NRM) Regions (2020)</resTitle><resAltTitle>NRMPROG_SDE.NRM_regions</resAltTitle><resRefDate><refDate>20070531</refDate><refDateType><DateTypCd value="001"/></refDateType></resRefDate><resRefDate><refDate>20140707</refDate><refDateType><DateTypCd value="003"/></refDateType></resRefDate><citId xmlns=""><MdIdent><identCode>ISOCW0501010795</identCode></MdIdent><identCode>122fd267-e687-4465-9f2a-229953faf7d0</identCode></citId><citRespParty xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>NRM Programs Data Manager</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum><faxNum>02 6274 1666</faxNum></cntPhone><cntAddress addressType=""><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country><eMailAdd>nrmprograms.metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="002"/></role></citRespParty><citRespParty xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>Metadata Publisher</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">(02) 6274 1111</voiceNum><faxNum>(02) 6274 1333</faxNum></cntPhone><cntAddress addressType=""><delPoint>GPO Box 787</delPoint><city>CANBERRA</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country><eMailAdd>metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="010"/></role></citRespParty><date><createDate>2017-08-18T00:00:00</createDate><reviseDate>2020-10-13T00:00:00</reviseDate></date><otherCitDet>When using this data in visual material (e.g. maps, web sites) the CC By licence requires citation of  this data in an acknowledgement as "Natural Resource Management Regions (NRM) 2020, Commonwealth of Australia 2020."
+
+The use of this data for the development of another data product should include the following statement within metadata of the new product that is embedded within and delivered with it: "This data has been developed using the Natural Resource Management Regions (NRM) 2020, Commonwealth of Australia 2020."</otherCitDet><presForm xmlns=""><PresFormCd value="005" Sync="TRUE"/></presForm></idCitation><resConst><LegConsts xmlns=""><accessConsts><RestrictCd value="005"/></accessConsts><othConsts>This data has been licensed under the Creative Commons Attribution 4.0 International Licence. More information can be found at http://creativecommons.org.au/learn/licences.</othConsts><useConsts><RestrictCd value="005"/></useConsts></LegConsts></resConst><graphOver xmlns=""><bgFileName>http://intspat01.ris.environment.gov.au/metadata_int/images/122fd267-e687-4465-9f2a-229953faf7d0.jpg</bgFileName></graphOver><distributor><distorCont><rpPosName>NRM Programs Data Manager</rpPosName></distorCont></distributor><resConst><LegConsts xmlns=""><accessConsts><RestrictCd value="001"/></accessConsts><othConsts>© Commonwealth of Australia (Department of Agriculture, Water and the Environment) 2020</othConsts><useConsts><RestrictCd value="001"/></useConsts></LegConsts></resConst><idStatus><ProgCd value="001"/></idStatus><idPoC xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>NRM Programs Data Manager</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum><faxNum>02 6274 1666</faxNum></cntPhone><cntAddress addressType=""><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country><eMailAdd>nrmprograms.metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="007"/></role></idPoC><themeKeys><thesaName><resTitle>ANZLIC Search Words</resTitle><date><reviseDate>20080515</reviseDate></date><resEd>Version 2.1</resEd><resEdDate>20080515</resEdDate></thesaName><keyword>BOUNDARIES Administrative_Conservation</keyword><keyword>BOUNDARIES Administrative_Management</keyword></themeKeys><dataScale xmlns=""><equScale><rfDenom>250000</rfDenom></equScale></dataScale><suppInfo>published externally</suppInfo><dataLang><languageCode value="eng"/><countryCode value="AUS" Sync="TRUE"/></dataLang><dataChar><CharSetCd value="004"/></dataChar><idCredit>The NRM region boundaries (2006 base layer) are primarily based on data and information supplied by the relevant state and territory government agencies. Geoscience Australia's Australian Maritime Boundaries (2014) and Geodata Coast 100K (2004) data were also used in the development of this dataset. Local Land Service region boundaries were sourced from the NSW Government.</idCredit><dataExt xmlns=""><geoEle><GeoBndBox><northBL>-9.187947</northBL><southBL>-55.173104</southBL><westBL>72.246195</westBL><eastBL>168.226179</eastBL><exTypeCode>1</exTypeCode></GeoBndBox></geoEle></dataExt><idPurp>NRM Region boundaries</idPurp><envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 17134) ; Esri ArcGIS 12.3.2.15850</envirDesc><spatRpType><SpatRepTypCd value="001" Sync="TRUE"/></spatRpType><dataExt xmlns=""><geoEle xmlns=""><GeoBndBox esriExtentType="search"><exTypeCode Sync="TRUE">1</exTypeCode><westBL Sync="TRUE">72.246195</westBL><eastBL Sync="TRUE">168.226179</eastBL><northBL Sync="TRUE">-9.187947</northBL><southBL Sync="TRUE">-55.173104</southBL></GeoBndBox></geoEle></dataExt><resConst><LegConsts xmlns=""><accessConsts><RestrictCd value="005"/></accessConsts><useConsts><RestrictCd value="005"/></useConsts><othConsts>CC BY</othConsts></LegConsts></resConst><idAbs>&lt;DIV STYLE="text-align:Left;font-size:12pt"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The Natural Resource Management (NRM) Regions dataset is maintained for the purpose of authoritative reporting on the Australian Government's NRM investments. The dataset is designed to cover all Australian territory where Australian Government funded NRM projects might take place and includes major islands, external territories, and state and coastal waters in addition to the NRM regional boundaries. &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Whilst the boundaries of NRM Regions are defined by legislation in some states and territories, this dataset should not be used to represent legal boundaries in any way. It is an administrative dataset developed for the purpose of reporting and public information. It should be noted that from time to time the states and/or territories may revise their regional boundaries in accordance with local needs and therefore alterations to either the attribution or boundaries of the data may occur in the future.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Current Version&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;In total, the 2020 version dataset comprises 63 map objects for 61 NRM regions. These comprise 56 mainland regions (of which two have associated large islands as distinct map objects) and a further five external territory islands.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The 2020 version updates the previous version (2017) with changes to boundaries of South Australian NRM Regions to align with new regional landscape boundaries under the Landscape South Australia Act 2019 (SA) Act which replaced the Natural Resources Management Act 2004 (SA) Act. Additionally a number of gaps and overlaps in the Western Australia NRM regions were fixed. &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Previous Version&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The 2017 version updates the previous version (2016 version 2) with changes to boundaries of six of Western Australia’s seven NRM regions (only Peel-Harvey Region is unchanged). The new WA boundaries are as agreed during 2017 by NRMWA, a collective of all incorporated NRM groups in that state. &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;There are a few changes of NRM names in Qld, Tas and WA from the 2016 version based on line area’s suggestion. &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The 2017 version also removes the NRM_BODY data (added for 2016 version 2) and the non-spatial OceanWatch map label previously included. These two changes relate to Australian Government administrative arrangements for NRM funding delivery.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Attributes&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The principle data fields in the 2017 version dataset are:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;-  NRM_Region &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;-  State&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;-  Area_Description (land area, state and coastal waters, territorial sea, Torres Strait)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;-  NRM_ID&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;NRM_ID and NRM_Region Names grouped by state/territory are as follows:&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;New South Wales (11 regions + 1 extra map object for Lord Howe Island)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1010 Central Tablelands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1020 Central West&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1030 Greater Sydney&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1040 Hunter&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1050 Murray&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1060 North Coast (excludes Lord Howe Island)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1061 North Coast - Lord Howe Island&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1070 North West NSW&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1080 Northern Tablelands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1090 Riverina&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1100 South East NSW&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;1110 Western&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Victoria (10 regions)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2010 Corangamite&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2020 East Gippsland&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2030 Glenelg Hopkins&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2040 Goulburn Broken&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2050 Mallee&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2060 North Central&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2070 North East&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2080 Port Phillip and Western Port&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2090 West Gippsland &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;2100 Wimmera&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Queensland (15 regions) &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3010 Burnett Mary&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3020 Cape York&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3030 Condamine&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3040 Co-operative Management Area (between Cape York and Northern Gulf)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3050 Desert Channels&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3060 Fitzroy&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3070 Burdekin &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3080 Northern Gulf&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3090 Maranoa Balonne and Border Rivers &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3100 Mackay Whitsunday&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3110 South East Queensland&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3120 South West Queensland&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3130 Southern Gulf&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3140 Wet Tropics&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;3150 Torres Strait&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;South Australia (8 regions) &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4010 Adelaide and Mount Lofty Ranges&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4020 Alinytjara Wilurara&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4030 Eyre Peninsula&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4040 Kangaroo Island&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4050 Northern and Yorke&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4060 South Australian Arid Lands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4070 South Australian Murray Darling Basin&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;4080 South East&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Western Australia (7 regions)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5010 Northern Agricultural Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5020 Peel-Harvey Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5030 Swan Region &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5040 Rangelands Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5050 South Coast Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5060 South West Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;5070 Avon River Basin&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Tasmania (3 regions + 1 extra map object for Macquarie Island)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;6010 North West NRM Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;6020 North NRM Region&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;6030 South NRM Region (excludes Macquarie Islands)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;6031 South NRM Region - Macquarie Islands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Northern Territory (1 region)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;7010 Northern Territory&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Australian Capital Territory (1 region)&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;8010 ACT&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;External Territories (5 regions) &lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;9010 Ashmore and Cartier Islands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;9020 Christmas Island&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;9030 Cocos Keeling Islands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;9040 Heard and McDonald Islands&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;9050 Norfolk Island&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idPoC xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>NRM Programs Data Manager</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum><faxNum>02 6274 1666</faxNum></cntPhone><cntAddress addressType=""><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country><eMailAdd>nrmprograms.metadata@environment.gov.au</eMailAdd></cntAddress><cntOnlineRes><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="002"/></role><displayName>Australian Government Department of Agriculture, Water and the Environment</displayName></idPoC><idPoC xmlns=""><rpOrgName>Australian Government Department of Agriculture, Water and the Environment</rpOrgName><rpPosName>Assistant Secretary, Biodiversity Conservation Division</rpPosName><rpCntInfo xmlns=""><cntPhone><voiceNum tddtty="">02 6274 1111</voiceNum></cntPhone><cntAddress addressType="postal"><delPoint>GPO Box 787</delPoint><city>Canberra</city><adminArea>ACT</adminArea><postCode>2601</postCode><country>Australia</country></cntAddress><cntOnlineRes xmlns=""><linkage>http://www.environment.gov.au/</linkage></cntOnlineRes></rpCntInfo><role><RoleCd value="003"/></role><displayName>Australian Government Department of Agriculture, Water and the Environment</displayName></idPoC><tpCat><TopicCatCd value="003"/></tpCat></dataIdInfo><mdMaint><maintFreq><MaintFreqCd value="009"/></maintFreq></mdMaint><dqInfo><dataLineage><statement>Original NHT layer
+
+Data was supplied from state GIS data for:
+
+NSW - Catchment Management Authority Areas
+QLD - Queensland NRM Regional Boundaries
+SA - NRM Regions
+TAS - Department of Primary Industries, Water and Environment NRM Regions
+VIC - Catchment Management Board Boundaries
+WA - NRM Regions of Western Australia
+NT - 1:100 000 State Border and Coastline
+ACT - 1:100 000 State Border
+
+The data supplied for TAS and WA was supplied in shapefile format with Qld, NSW, VIC data supplied in ArcInfo Export format.
+
+As there is only one NRM region for NT, this was derived from the coverage 1:100 000 Coastlines and State Borders.
+
+All source coverages were projected to Geographics, and consistent attribution was applied. All source coverages were appended, and the result cleaned with 0.0001 tolerances. On inspection of the state data it was noted that the borders and coastlines used were different amongst those datasets supplied by states and territories. The 1:100 000 Geoscience Australia (formerly AUSLIG) state borders and coastline were appended to the coverage in an effort to standardise the series at a national level. Slither polygons along common boundaries were eliminated, and a final check of attribution conducted.
+
+In Februrary 2004, new NSW NRM regions (CMA boundaries) were supplied to DEH. The existing NSW regions were replaced by the new boundaries, which are largely amalgamations of the existing regions (the number of NSW regions was reduced from 20 to 13), however there were also a number of minor boundary changes. The 1:100 000 Coastlines and State border was retained and only internal boundaries updated.
+
+In addition to the new NSW boundaries, a number of changes were also made in February 2004. A number of changes were made to update the NRM dataset:
+
+- Minor updates were made to VIC, SA, WA and Qld region names
+- Attributional corrections made to some islands and regions
+- Islands in Bass Strait were assigned to Vic or Tas as according to the Aus100k dataset
+- Some islands in Bass Strait containing sliver polygons corrected
+- New numeric code assigned to each region
+
+In February 2005, a number of further changes were made to the data set:
+
+- Torres Strait boundary updated as per the Bilateral Agreement. Was derived from the latest GBRMP boundary (Great Barrier Reef Marine Park Authority, July 1 2004), the Australia/Papua New Guinea border (Australian Maritime Boundaries Information System, Geoscience Australia 2001), the boundary of Australian territorial waters (Australian Maritime Boundaries Information System, Geoscience Australia 2001), the 11 degrees south latitude and the coastline of the mainland (Geoscience Australia 1:100000 coastline). These changes also resulted in an altered Cape York region boundary.
+
+- The Qld marine zones were changed to the 3nm limit (Australian Maritime Boundaries Information System, Geoscience Australia 2001), as well as some minor changes to internal region boundaries supplied by QLD State
+
+- Marine zones to the 3nm limit (Australian Maritime Boundaries Information System, Geoscience Australia 2001) were added to Tasmania. The marine zone was divided amongst the regions by extending the region boundaries beyond the coastline in the same direction. The boundary between South and North West was determined by locating the mid-point of the harbour (derived using a series of buffers).
+
+- Macquarie Island and corresponding 3nm limit was added to South  NRM region in Tasmania (Geoscience Australia 1:100000 coastline and Australian Maritime Boundaries Information System, Geoscience Australia 2001)
+
+- An incorrectly labelled polygon was corrected from terrestrial to marine in Northern Gulf.
+
+- The border between East Gippsland and North East (VIC) was updated using data supplied by the Victorian Department of Sustainability and Environment.
+
+- The dataset was integrated to the Geoscience Australia 1:100000 coastline with a cluster tolerance of 0.00005 degrees. The resulting NRM dataset aligns exactly with the coastline.
+
+August 2005:
+New NRM boundaries were provided by the South Australian Department of Water, Land and Biodiversity Conservation.  These boundaries were added to the national dataset.  The SA coastline was sourced using the Geoscience Australia 1:100,000 Coastline.  The new SA boundaries include a marine component to the three nautical mile limit.
+
+November 2006:
+Region names updated to remove / and replace with - (i.e. Hawkesbury/Nepean became Hawkesbury-Nepean). Region was removed from region names where applicable (i.e. South West Region became South West).
+
+
+2006 Base Layer
+The base layer for this dataset is the Natural Resource Management (NRM) Region Boundaries (formerly known as Natural Heritage Trust II (NHT2) Region Boundaries (2006)). This base layer has been perdiodically reviewed and built on to develop subsequent datasets. 
+The original 2006 base layer included an offshore component for regions in SA, TAS and QLD. Offshore components for the other States and the Northern Territories were created using Geoscience Australia's AMB 2006 coastal waters data. Mainland region boundaries were checked with all state and territory agencies resulting in changes to the internal mainland boundaries for QLD and WA. The amended boundaries were sourced from the relevant agency from these States.
+
+Geoscience Australia's Geodata Coast 100K 2004 dataset was used for mainland state/territory borders. The AMB 2006 data was used to define the offshore boundaries between the States and the Northern Territory. Offshore boundaries between NRM Regions within a State were produced by extending region boundaries at 90 degrees to the state 100k coastline unless otherwise requested by state or territory agencies. 
+
+2009 version 
+This version included updates to: the internal boundaries within WA and Qld; the seaward extent of coastal regions, which were extended to the 3 Nm coastal waters limit for all States and the Northern Territory; the inclusion of more offshore islands (and coastal waters); and the addition of external territories and their 12 Nm territories sea.
+The coastline has been removed from the data in line with the decision to extend all coastal NRM Regions to the outer limit of the adjacent coastal waters. It should be noted that the removal of the coastline means that islands lying within the outer limit of the Coastal Waters adjacent to the mainland are no longer depicted as separate features in the data. For example the many islands in Shark Bay WA are not displayed as separate entities in this dataset as they fall within the expanded (marine) extent of the Rangelands NRM Region in the new dataset. Users intending to create sub-continental scale maps to communicate locations of NRM regions boundaries are recommended to use additional layers containing coasts and near shore islands (as well as state/territory borders and major towns if required). 
+
+Not all coastal waters for the States and/or the Northern Territory have been included in the data. The primary consideration was whether land based activities might affect the adjacent waters. For the 2009 and subsequent datasets, coastal waters adjacent to the mainland and islands contained in the Geodata Coast 100K dataset are included. Significant islands include Macquarie Island (Tas) and Lord Howe Island (NSW).
+
+Australia's External Territories (Heard and McDonald Islands, Cocos Keeling Islands, Christmas Island, Ashmore and Cartier Islands, and Norfolk Islands) have also been included in the 2009 and subsequent versions. The reporting region for these islands is the area within the outer limit of the 12 Nm Territorial Sea adjacent to each of these External Territories as sourced from the AMB 2006 data.
+
+Specific issues relating to the development of the 2009 version for each State are described below:
+
+WA- Data supplied from different WA regions contained overlaps around the Perth NRM. The Perth NRM confirmed that the NRM bodies work across neighbouring regions. As these boundaries remain ambiguous (and are not defined in any legislation) the Australian Government Land and Coasts settled on the boundaries in this dataset for the purposes of reporting.
+
+NSW - Jervis Bay was added to the Southern Rivers NRM region after consultation with the Australian Government Land and Coasts NSW Team. Lord Howe Island was added to the NSW dataset as a part of the Northern Rivers NRM Region. The NSW Catchment Management Authority (CMA) Hawkesbury-Nepean, provided the marine NRM divisions between theirs and Central-Rivers, identifying that their northern regional boundary bisects Lion Island.
+
+VIC - The Victorian Department of Sustainability and Environment (DSE) provided a state NRM dataset for this update. Their boundaries matched the pre-existing NRM Region Boundaries dataset, except for one small area between East and West Gippsland. Victoria agreed to use the pre-existing NRM boundaries in this area. 
+
+The addition of the 3Nm coastal waters component for Victoria presented a challenge in defining the offshore boundaries between Port Phillip and Westernport and the neighbouring NRM Regions of Corangamite and West Gippsland. The islands on the western shore of Port Phillip Bay in the vicinity of Queenscliff (Swan Island and Duck Island) and Swan Bay have been included in the Corangamite NRM region. From north to south the border between the Corangamite NRM region and Port Phillip and Westernport Bay NRM region is a line drawn from the eastern arm of Edwards Point to Swan Point, along the eastern shore of Swan Island and between the southern extremity of Swan Island to the eastern extremity of Point Queenscliff. The offshore boundary between these regions is a line drawn directly south from Point Lonsdale to the outer limit of coastal waters. Finally, the offshore boundary between Port Phillip and Westernport Bay and West Gippsland is a line drawn directly south from the town of San Remo to the outer limit of coastal waters.
+
+Tas - The area of Coastal Waters adjacent to the Hogan Group of islands in Bass Straight is divided between Victoria and Tasmania. For the purpose of this dataset the entire area has been allocated to the North NRM region of Tasmania.
+
+2010 Version
+The major changes to the data for this dataset are that new NRM region boundaries for South Australia which came into effect on 1 July 2009 have been incorporated into the data; and, the data structure (attributes) have been modified. Other more minor changes include: all offshore boundaries between States and/or the Northern Territory were reviewed to be consistent with the agreed coastal waters boundaries as depicted in Geoscience Australia's AMB 2006 data; the area of coastal waters adjacent to the Cooperative Management Area in Queensland has been included in that region; and, the external territory of Ashmore and Cartier Islands has been added to the dataset.
+
+2012 Version
+This dataset incorporates changes to the NSW NRM regions that came into effect on 12th October 2012 (NSW Catchment Management Authorities Amendment Order 2012). Major changes are: merger of Sydney Metropolitan NRM region into the Hawkesbury Nepean NRM region; merger of Lower Murray Darling NRM region into the Murray NRM region; changes of the boundary of Western NRM region; and changes of the boundary of the Central West NRM region. 
+
+2014 Version
+This 2014 version marks the change in NSW from Catchment Management Authorities (CMA) to Local Land Service areas which will now be used for NRM regions in NSW. Local Land service areas came into effect in NSW on 1 January 2014. A couple of gaps between Cape York and Torres Strait NRMs have been removed. Known discrepancies with published boundaries for several NRM regional bodies in WA (as per the 2009 version) remain in this dataset.  Further detail is in the data quality report section below.
+
+Updated "North West" and "South East" NRM regions in NSW to "North West NSW" and "South East NSW" to maintain unique NRM names for PMST funtionality (July 2014)
+
+2015 Version
+This 2015 version defines the Peel-Harvey NRM region. The OceanWatch NRM has been recognised but there is no spatial information defined. Several NRM names have also been updated as a result of new information:
+1. Fitzroy changed to Fitzroy Basin
+2. Burdekin changed to NQ Dry Tropics
+3. Wet Tropics changed to Terrain
+4. Border Rivers changed to QMDC (Queensland Murray Darling Basin)
+5. MacKay Whitsunday changed to Reef Catchments
+6. Avon changed to Wheatbelt
+7. North West changed to Cradle Coast
+
+It also updates the marine portion of the NRM regions to be consistent with the current (2014) Australian Maritime Boundaries Information System (AMBIS) coastal water limit boundary. The majority of these changes resulted in a negligible change to the boundaries (in the order of millimetres). There were, however 5 NRM regions which gained additional islands as a result of the change (Cape York, Rangelands, North, Cradle Coast and South Coast). Islands which were either within the either contiguous with the 3 nautical mile limit or in amongst other islands that were historically included in a region were added to the region boundaries. Coastal NRM region governing bodies were informed of these changes and no objections were received.
+
+2016 Version
+The 2016 version 2 updates the marine portion of the NRM regions to be consistent with the current (2015) Australian Maritime Boundaries Information System (AMBIS) coastal water limit boundary. It also includes a new unique ID field for sorting purposes (this is explained in detail below). Three NRM names have also been updated as a result of new information from relevant state/territory agencies and/or NRM regional bodies, as follows: 
+
+1. “Avon” changed to “Wheatbelt”
+2. “North West” changed to “Cradle Coast”
+
+The 2016 version 2 maintains definitions established in the 2015 version, including for the Peel-Harvey NRM region and for the OceanWatch Australia Limited NRM organisation (not spatially defined). It also maintains changes made in earlier versions including: the 2014 changes in NSW from Catchment Management Authorities (CMA) to Local Land Service areas; and the 2012 update/formalisation of the 2010 dataset (which was an interim update of the NRM Regions 2009 dataset, released Feb 2009). The original base layer version of this dataset was released in 2006 as the Natural Heritage Trust II (NHT2) Region Boundaries dataset. 
+
+Whilst the boundaries of NRM Regions are defined by legislation in some states and territories this dataset should not be used to represent legal boundaries in any way. It is an administrative dataset developed for the purpose of reporting and public information. It should be noted that from time to time the states and/or territories may revise their regional boundaries in accordance with local needs and therefore alterations to either the attribution or boundaries of the data may occur in the future.
+
+In total, this dataset now represents 61 NRM regions, two of which have large and remote islands which are distinguished in the spatial data, resulting in 63 map objects. The 61 NRM regions comprise 56 mainland regions administered by 55 NRM regional bodies (the Cooperative Management Area in QLD is jointly administered by the two adjacent regional bodies: the Cape York and Northern Gulf NRM bodies) and seven islands (five administered by the Australian Government as external territories, and two administered by nearby mainland NRM regional bodies, which are shown as separate map objects).
+
+The 2016 version 2 includes a new unique ID field in the table structure to allow for sorting based on state, region name and region object (where there is more than one part).
+
+
+2020 Version
+
+The 2020 version updates the previous version (2017) with changes to boundaries of South Australian NRM Regions to align with new regional landscape boundaries (https://data.sa.gov.au/data/dataset/landscapes-sa-boundaries) under the Landscapes South Australia Act 2019 (SA) Act which replaced the Natural Resources Management Act 2004 (SA) Act.  Minor edits were made to remove gaps, slivers and overlaps so the new SA boundaries  aligned with non-SA NRM Regions.  The "Hills and Fleurieu" and "Green Adelaide" Landscapes SA boundaries were merged to form the 4010 "Adelaide and Mount Lofty Ranges" NRM Region.  Existing NRM Region names were retained and the following shows the Landscapes SA region -&gt; NRM Region names:
+
+Landscapes SA -&gt; NRM Regions
+Alinytjara Wilurara -&gt; 4020. Alinytjara Wilurara
+Eyre Peninsula -&gt; 4030. Eyre Peninsula
+Green Adelaide -&gt; 4010. Adelaide and Mount Lofty Ranges
+Hills and Fleurieu -&gt; 4010. Adelaide and Mount Lofty Ranges
+Kangaroo Islandv 4040. Kangaroo Island
+Limestone Coast -&gt; 4080. South East
+Murraylands and Riverland -&gt; 4070. South Australian Murray Darling Basin
+Northern and Yorke -&gt; 4050. Northern and Yorke
+South Australian Arid Lands -&gt; 4060. South Australian Arid Lands
+
+Additionally a number of gaps and overlaps in the Western Australia NRM regions were fixed. 
+</statement></dataLineage><report type="DQAbsExtPosAcc"><measResult><ConResult><conSpec><resTitle>Absolute External Positional Accuracy Check</resTitle><date><reviseDate>20180420</reviseDate><refDateType><DateTypCd value="003"/></refDateType></date></conSpec><conExpl>The positional accuracy of the data varies according to the scale and origin of the source material. Component data scales were generally larger than 1:250 000. The positional accuracy of similar scale topographic data is expressed as not more than 10% of well-defined points are in error by more than 140 metres. An assessment of the linework in the data against various baseline material (drainage basin and LGA datasets) suggests that this figure provides a reasonable overall assessment of the positional accuracy of the data.
+
+To create the 2010 dataset, the NRM_regions_2010_interim layer was combined to the CONTEXT_SDE.state_borders_100k layer, with tolerances set at 0.0000001. The 2012 dataset maintains this approach. 
+The dataset has also been agreed by the states and territories as well as the Australian Government to be an accurate depiction of the NRM Regions for the purpose of reporting and public information and is therefore accurate as supplied.
+
+Linework has been crossed checked with websites of NRM regional bodies, where available. Data for WA NRM regions in this version (2012) contains known overlaps and discrepancies with boundaries published online by relevant NRM regional bodies. As these boundaries are not defined in any legislation the boundaries from the 2009 dataset have been maintained in this version, in the interest of consistent reporting.
+
+The 2017 version of the data has incorporated the boundary changes of the six WA NRMs (The boundary of Peel-Harvey NRM has not been changed) based on email from the CEO of South West Catchments Council.
+
+The WA NRM region boundary is based on the map of 18 May 2017 (Data Custodians: Landgate, WA Department of Environment, WA Department of Water, Geoscience Australia 9 project funding from Australian Government (through National Landcare Programme) and the Government of Western Australia.</conExpl><conPass>1</conPass></ConResult></measResult></report><report type="DQNonQuanAttAcc"><measResult><ConResult><conSpec><resTitle>Non Quantitative Attribute Accuracy Check</resTitle><date><reviseDate>20180420</reviseDate><refDateType><DateTypCd value="003"/></refDateType></date></conSpec><conExpl>The main attribution supplied with this data are the names of the NRM regions and their administrative body. Region names are as agreed by the states and territories for the 2006 base layer with the exception of documented changes in subsequent versions (see Lineage section above).</conExpl><conPass>1</conPass></ConResult></measResult></report><report type="DQConcConsis"><measResult><ConResult><conSpec><resTitle>Conceptual Consistency Check</resTitle><date><reviseDate>20180420</reviseDate><refDateType><DateTypCd value="003"/></refDateType></date></conSpec><conExpl>All records have been checked for consistency between attributes. Error checks have been undertaken to remove slivers and overlap errors using ArcGIS topology tools.</conExpl><conPass>1</conPass></ConResult></measResult></report><report type="DQCompOm"><measResult><ConResult><conSpec><resTitle>Completeness Omission Check</resTitle><date><reviseDate>20180420</reviseDate><refDateType><DateTypCd value="003"/></refDateType></date></conSpec><conExpl>The dataset is a complete picture of all NRM Regions as supplied by the states and territories. Users should be aware that regional boundaries may change as a result of changes to administrative arrangements either by state/territory governments or regional groups.</conExpl><conPass>1</conPass></ConResult></measResult></report><dqScope><scpLvl><ScopeCd value="005"/></scpLvl></dqScope></dqInfo><dataSetURI>Server=SPATPROD; Service=sde:oracle11g:SPATPROD;  Version=SDE.DEFAULT; Dataset=NRMPROG_SDE.NRM_regions</dataSetURI><eainfo><detailed Name="NRM_regions_2020"><enttyp><enttypl Sync="TRUE">NRM_regions_2020</enttypl><enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp><attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">NRM_REGION</attrlabl><attalias Sync="TRUE">NRM_REGION</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">40</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">STATE</attrlabl><attalias Sync="TRUE">STATE</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">20</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">NRM_BODY</attrlabl><attalias Sync="TRUE">NRM_BODY</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">55</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">AREA_DESC</attrlabl><attalias Sync="TRUE">AREA_DESC</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">40</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">NRM_ID</attrlabl><attalias Sync="TRUE">NRM_ID</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">5</attwidth><atprecis Sync="TRUE">5</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">SHAPE_AREA</attrlabl><attalias Sync="TRUE">SHAPE_AREA</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">SHAPE_LEN</attrlabl><attalias Sync="TRUE">SHAPE_LEN</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed></eainfo><mdLang><languageCode value="eng" Sync="TRUE"/><countryCode value="AUS" Sync="TRUE"/></mdLang><mdHrLv><ScopeCd value="005" Sync="TRUE"/></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><refSysInfo><RefSystem><refSysID><identCode code="4283" Sync="TRUE"/><idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">8.3.4(3.0.1)</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="NRM_regions_2020"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><spdoinfo><ptvctinf><esriterm Name="NRM_regions_2020"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo><mdDateSt Sync="TRUE">20201106</mdDateSt><mdFileID>122fd267-e687-4465-9f2a-229953faf7d0</mdFileID><Binary><Thumbnail><Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAF4AxoDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAopGYKpJOAOSTXjvxg8faZqWnppWnXBuLmKcStPD9xCuR
+gN3PPUelb0aMq01GJEpKCuz2OivnHRfi1rujWl2hna+uJ2UrNeSNIIgAchVz3z+lQWvxS8VJfeam
+pSTPI3+pZFZSSTwFxx17e1d/9m1ddUY+3ifStFVtNmnuNPtZbqH7PcvErSwg52OQCy59jkVZrynp
+odIUUUUgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK8z8bfGQeDfij4a8JS6
+dG1vqyKzahLciMRlnZAoXHJyo6kZ3ACgD0yiiigAooooAKKKKACiiigDyrXvhDrGrfGbTPGCeJZ0
+0m3Ku+lsW+Qom0Kg+7tYkk5GfmbHXj1WiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACisbRfGWheIr+8stL1ey1C7syBPFbTq7R/XB9ePY8da2aACiiigAooooAKZJNHDs8x1Te21dxA
+3N6D3p9eW/GC+uVvrC1zttwhlXHd8kZ/Afz/ACDmxFb2FNztc9PklSFd0jqi/wB5jgVQvPEel2EZ
+kn1C3jUf9NAT+AHJrwC61C6vmBubiWcjGPMct0GO/tUFOx5Es0f2YH0LoviTT/EPnGwmM6w7d7bG
+UZOeOQPStOvBvDnjK98M2t1BbYImIILY+RgeTjHJI4r0TR/ippepXJhuEew/uSSkFT9SOlFjtw+O
+p1ElN2kdrRXIXPxO0aO5SOO43oGPmOUfGOny4HPr6fnxzfir4pTtcGHRZFW3C83DIdzH2DDj8qDa
+pjKNNN81/Q9Ot7qK68zynD+W5jbHZh1FS1wfwhuTNot6jbmdbkuWY5zlR/UH867ykb0antqan3Ci
+iig2KuqxtNpd5Gi7neF1VR3JU4FfLeteFdX8O2n2rUdOuLW3zt8xk+XPYZHSvq6vF/2jfEkSafp+
+hxsGuJJPtUoHVFAKqD9ST/3z71r9engaUpQS+ZjUpqerOB+Hvh+y8calJp8uqf2ZeEZgjMHmecAC
+WwdwwQBnH+Feq+HfgiNB1yy1BtZ+0C2lEnlfZdu7HvvOPyrwLw3r0/hjXLTVLZUee2fcqyAlTwQQ
+cexNfX+g6xH4g0az1KGN4orqJZVSTG4AjvgmubCZricRBwqS19Ft9wo04di/RRRWhuFFFFABRRRQ
+AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB
+RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFczr3w18NeJ/Emna9qmkxXmraeFFtcO7jY
+AxZQVB2thiSNwOCa6aigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
+KKACiiigAprKsisrKGVhgqRkEelOooA8Mu/2af8AhFGN78OtbuPDuryyhZZrp/NXyMkmNflzjcEP
+Oc7Rk17fbxvFbxJJKZpFUBpGABcgcnA4GfapKKACiqerarbaHptzf3knlWtuhkkfBOAPYda8fb9p
+axi1C7X+zZ7myyv2dgBFIBj5gw3MDz0IxwelbU6NSrdwVzKdSFP4me2UV5l4V+PugeIr2GzuIptL
+uJpCkZmIMZ9MsOhPTp+Nem1M6c6btNWKjOM1eLCvOvjBcWL2NpA0o/tBH3ogGTsIwc+mTj64rv7q
+6hsbeSeeQRQxjLO3QCvAfFGstr2uXV4TlGbEfsg4X9KhHm5hWUKXJ1Zl0UUVR8uFFFFABRRRQB7B
+8J9IjtNBa/DOZbxiGB+6AhIGP15ruK85+Dl9LJa6jaMwMMTJIgJ5BbIP4fKP8mvRqk+wwbi6EeUK
+KKKR2hXyH8Sb24vvHmvPcsWdLySJc9kRiqj/AL5Ar68r4z8U6pJrXiTU76VDFJPcO5jOfl5PHPPH
+SvIzJ+5FEyMuvpz4L+KoNU8H6Zp81wp1CGJ1EZJyY0faDyMcAqMAnjHrXzHXbfDDxlc+HtesozOv
+2RWfbDM+xNz7Q3zYOMhRjtkDPevNwlX2NS72ZKPqqisvQ/E2m+I45H066FyqBWOFZeGzgjIGQcEZ
+HGVI6g1qV9QmpK6NAooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB
+RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF
+FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWX4g8TaZ
+4VsWu9UvIrSEA7d7fM5HZV6sfYVh+Mtdt/Dq3Muqa9FY28gjltYVBEwaM7nUBWBdXAA7YzjuK+bP
+iN4/u/iBrn2uUNBaQgpbW24kRrnkntuPGT7AdhXdh8K6zu9jlrV1TXmQ+NvHmp+NtWuLi6upvsbS
+MYLMv8kSZ+UYHBOMZOMnFc1RRX0cYqKtFaHiyk5O7CvYvAP7QU3h/S007WrSXUY4UIhuYnHm8fdV
+geo7bs5A7GvHaKipShVXLNFwqSpu8WfQ3iL4tWvjXQxb6XDcQQs4E5uAATgA7RgnjJ6+1cfXP+Cf
++QVL/wBdj/6CtdBXzVaCp1HGOyPMxFSVWo3IKKKKxOYKKKKABeSBnHua9m8K+D9FbSkLW8N9tOzz
+njBDsDyynqQT05wQB+PjNaei+JNR8PyM1jctEG+8hAZT74PekdmFrQozvUjdHuGjeGNN8PyzyWFv
+5BmxvG9mHGemTx1rVrzzwR8RLvXNY+xagtuiyKfLZBtO4duTzn+leh1J9Rh6lOpC9JWQUUUUHSFf
+HfjS3uF8aa3FKN9wb6bdsH3iXJyB719fXl0ljaT3MuRHCjSNgE8AZPAr5Tm8TafqN7PdvewGeZy7
+yMdpYk5PX3oeX/XlbmskZzdjmTpt0P8Al3k/75NV67hJEmQMjK6N0ZTkGue1LQ3WXfapvjbnaP4a
+4Mdk0sPBToXl37mal3I9F8Tap4dmeXTr2W1do2iJRv4T1x6c4P1FfUvw11bUNc8G2N7qQf7RMGKt
+IFDMm47SduAcjHOB9O5+T2sp7eSMSQnLchW74619e+C706h4U0uf7JHYq1ugW3ikDoigAAA/THB5
+HSuTAxnGcozurdDSLV7G3RRRXtGgUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVyvjD4ja
+X4Ms72S8EvnwKvlwFCn2hmBwI2IwwGPmIzt79geqr5n/AGkC/wDwnlsDJuX7DGVXdnb878Y7dM11
+Yakq1Tlkc9eo6cOZHn3ibxJfeLNZn1LUJmlnlPAzwi9lUdgKyqKK+oSUVZHhttu7CiiimIKKKKAO
+28E/8gqX/rsf/QVroK5/wT/yCpf+ux/9BWugr5jE/wAaR5dT42FFFFcxmFFFFABRRRQAV0ei/F+T
+wTHHb6jBLf2UmdrIw8yMgDgZ6j8eP0rnK5nxt/qrT/eb+lS9jpw9SVOonFnp/wAQ/jlpeq+Ent9B
+uLuHUppEw20xPCquGzuBxztAwD0aur+CnijXvFnh65utZCyRpKI7e527WlwPmyAMEA45HUkjtXy3
+XsXgb49W/hjw/baVcaLmO1QJG1rJjf1LMwbuSc8dyelQe5SxDlU5qjsd/wDHXxtb+FfA95aiYLqO
+pRtbwRqfm2nh26HgA/mRXyBXa/FTx5efEDXI764hS2gjTy4IEbdsXOSCeMnPfAriq+iwcVGkmup6
+kZKa5o7ChiucHGeKmtb64spEeCZo2U5GDx+VQUV2jNYeKNRaRGkn80K2drKoz7cCvpj4W+PpL7Td
+C0aC133KlhciRsbIgpIZeB0JGQeeD65HzHouknVrhgWKRIAXI6/QV6r4D1I6N4s0mcM20TLG53YJ
+VvlOfwNfPZjUgqkVH4upx1KihUVvmfT9FFFcZ3hRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUjMEUs
+xCqBkk9BQAtFY+n+LdI1JpRDqlhIyDfsjulZwmAQzLwV69DWDrXxl8I6LDI51aO9kXpDZDzWc+gI
++X8SQK0VOcnZIhzilds2/GniaPwf4ZvtWkQyfZ0+SMY+ZiQqjkjjJGec4BxXyJ4r8V6h4y1h9S1J
+0a4ZQgEa7VVR0AH5/nXTfFD4sXfxBmit4o2stJhIZbcnLO+PvMR1xk4FcDXv4TD+xjzSXvM8jEVv
+aO0dgooor0DkCiiigAooooA7bwT/AMgqX/rsf/QVroK5/wAE/wDIKl/67H/0Fa6CvmMT/GkeXU+N
+hRRRXMZhRRRQAUUUUAFcz42/1Vp/vN/SumrH8SaXJqdvH5RHmRkkKf4vbNROSjG7N6EXKokjh6Kn
+nsLm1UtLBJGoONzKQPzqCs009jvaa0ZT1KPdGr/3TWbW3NH50TJ0yKyTbyq2DG2fpXvYKqvZ8rex
+6uFqLk5W9iKirSafK3XC/U1Kmks8ir5qKCcbmzgV1vEUk7cx0OvSW8jrfBenxJpJnIDSTMdx9AOA
+P6/jWvcWxRgUUlaZoumQaTamCF/MOdztkE5rQrhxFGFe9/vPiauLksRKpF3TZ7z8O/GS+KtL8uVf
+LvrZVEozneOzDPPbn3+tdbXzFYaldaXcefZ3EltNjbviYqcHtXrngX4mW+pWyWerTrBfIMefJhUl
+5457GuOpQcdY7H0GBzONVKnW0l36M9BoqK3uoLuMPBNHMh6NGwYHt2qWuQ+g31QUUUUAFFFFABRR
+RQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFF
+ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUA
+FFIzBFLMQqgZJPQV5L4t/aI0fSWlt9HgfVrgL8s+dkAbtz1bHfgdOvca06U6rtBXM51I01eTJfjJ
+8Vr3wHqOm2WliF7p0M8y3ERZDGSVUZBB6q3T0FcG/wC0p4ie1dP7P05J2XCyqj4U564LHt+v5V5j
+ret3viLVJ9Q1Cdrm6mbc7t+gA7Adh2qjX0FPCU4wSkrs8ieInKTcXZHvWiftLJHosp1bTWm1VWxG
+tp8kUgx1YsSVPXOAe34cRr3x28WazLJ5V3Hp1s2QILaJemMcswJP5/hXnlFaRwtGLuokSr1JK1xW
+YuxZiWYnJJ6mkoorqMAooooAKKKKACiiigAooooA7bwT/wAgqX/rsf8A0Fa6Cuf8E/8AIKl/67H/
+ANBWugr5jE/xpHl1PjYUUUVzGYUUUUAFFFFABTJO1PpknauXFfwZHfgf95j/AF0Kt9bpdWssci7l
+Kn8/WvPOnB4NelVm6noNvqXzf6mXPLqBz9fWvLw9ZU7qWx9FiqDq2lHdHD0Vr3Hhe8hlRUCyq38S
+nAHPerP/AAh83k5+0J5mPu4OPz/+tXo+3prXmPLWHqvTlOforodP8JyM+68YIn9xDyfqa1IfDNjD
+IWMbSc8K7ZArOWKpxdtzSOEqyV9it4a02W3tmnkYjzBlY+2Ox+ta1WAAoAAwBUbqFX3rqwOOu3Tn
+1ehxZll9kqtPotfkR05WKMGHUHIptPjjMje1e9OUYRcpbHy6vfQ7zSr5P3FzbsVVWBGzgj1FeraR
+r1prUZMD4dfvRvww/wAa8H07VGso44NimMHlu/J5roJNUl0hRdW8oiuE5jbjr9O/FfCwqPDVWo6x
+bP0PD4uFajzt6xWp7TRWT4Z8RW/iTS4rmF183aBNEDzG2OR9OuD3rWr3001dHZGSnFSi9GFFFFMo
+KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo
+oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii
+igDivjFq95o/w91SSygaaSZPs7soJ8qN+Gc49BkZ7Eg18jV9T/HjxJZ6L4FuLGcNJc6l+5gjU4+6
+QzOfYcfiQO+R8sV9BgFak3bqeRi376QUUUV6ZwhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHbeCf+
+QVL/ANdj/wCgrXQVz/gn/kFS/wDXY/8AoK10FfMYn+NI8up8bCiiiuYzCiiigAooooAKZJ2p9Mk7
+Vy4r+DI78D/vMf66DKKKK+ePsQooooAKKKKACmyD5Scc06g8git6M/Z1Iy7M58RT9rSlDumV6sQx
+svOeD2qDHzYq7X0+YVnGKhHqfnFOOuvQKc0ryKoZiwUYUE9KbRXzx1Xex2nwt8QLpOtPZuhZL4qg
+YEfKwzj8OTXslfNdrcPZ3MM8ZxJE4dT7g5FfQ+j6rDrem297AcpKoO3OSp7qfcHivQw8rrlPpsrr
+c0HSfTYu0UUV1nuBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF
+FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU
+UAFFFFABRRRQAUUVFdTG3tppVjaVo0LCNBlmwM4HuaAPmr9obxJba14ugs7WRpBp0bQy8EASFssB
+64AFeV1b1XUJNW1S8vpRiW6meZwCTyzFj/OqlfXUoezgodj52pLnk5BRRRWpAUUUUAFFFFABRRRQ
+AUUUUAFFFFABRRRQB23gn/kFS/8AXY/+grXQVz/gn/kFS/8AXY/+grXQV8xif40jy6nxsKKKK5jM
+KKKKACiiigApknan0yTtXLiv4MjvwP8AvMf66DKKKK+ePsQooooAKKKlt7d7qTZGMnv7c4zQLbcj
+KkAEggHofWkrp49Pi+ypDIokCjr+OeKfb2kVtGUReD1zzms+dHL9YXY5lbNljEzD5CcDNStC6xh2
+RgpOASK6UxptAKrtHQY4FcZrWrPf3eUbEUZwmO/vXu4GnXzSpyt6Jb/keDLL4zlJwdky3RSLnaM9
+cc0tcj0djwype6lFZ4DHL5Hy+3rTPCviw+F/F0WpQM/2YttmVcAvGSNw5HqM/hWLqkjSX0u49DgY
+9KqV5860ubToaQk4SUo7o+lz8YvCQjDf2ryRnb9nlz9Pu9a62wvYtSsbe7t23QXEayxsRjKsAQcf
+Q18f28D3VxFCn35GCLn1JwK+t/D+jxeH9FstOh+5bxKmf7x7n8Tk/jXs4XEVK7fMlZH1GCxVXEuX
+OlZGhRRRXonrBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFA
+BRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
+FFFABRRRQB8zfHP4czeHdak1qzhH9k3j5bYABDKeoIAGAex+ue2fKq+49W0u31zS7rT7tPMtrmNo
+pF74Ixx6H0NfE/ibTZPDfiLUtLZlkNrO8W5W3ZAPHPHb2r38JieaPLPdHiYuCovm6MqUUyKTzAfW
+n16afMro401JXQUUUUygooooAKKKKACiiigAooooAKKKKAJYrqeBdsc0ka5zhWIFP/tC7/5+Zv8A
+v4f8ar0VyySu9DlluWP7Qu/+fmb/AL+H/Gj+0Lv/AJ+Zv+/h/wAar0VHKuxNjr/A+qQRTXbaheBf
+lUIJ34PJzjP0H513kPkXESyRhHjYZVlAwR6141ZiI3cAnDGDevmbeu3POPfFex6f5P2G3+zrsgMa
+mNcYwuOK+QzikqdRVE3eX3aBZEvkp/cX8qPJT+4v5U6ivneaXcLDfJT+4v5UeTH/AHF/IU6ilzPu
+NaaoZ5Mf/PNfyFHkx/8APNfyFPopFc0u5R1KNVhXaoX5uwrNrT1T/Up/vf0rMq1sfRYJt0VcK1NB
+ic3DSbfkC7d3vxWdDG00iRr95jgV1NvbrawqigcDkgYz71M3ZWNq0+WNu5JRRRWBwBXGeJLcW+ps
+UTYrgN04J74rs6zfEVuJ9LmPG5PmBP15/SvcyfFfVcXG+0tPv6lRdmcjFeyx/wAW8f7XNTf2mdpy
+nzdsGqNFfo9TL8LVfNKCv935ClhaM3dxMe+ulW4IjO7nLMTnJqa0ha9lSOIbix/KmX+mhVaWL6lc
+9B61J4ZvHttTjjDqscvytu6ev518pi8rpyqpNcuvTseRiMPZ7WNjRdOa11qNLmEPEvLFhlSOPavq
+2MqY1KbSmBt29MdsV851658K2mbw3J5j7kE7CPJ5AwvH0zWssFDC0rQfX8zry6XJJw7nZUUUVyn0
+AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB
+RRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAcp
+8SPFl34I0KHWYLdLu1guEF5ESQxibK5U9iGKdevtXiHx68GWiSQeMtJuVudO1VwJD5gI8wrkFO+C
+FJI7EHtwPpO+sbfUrSW1u4I7m2lXbJFKoZWHoQaydb8J6TqXhWXRbi2hi0xIdiKwwsIUfKw5GNvX
+Oa3p1FBpnFiKDrJq+nTyZ8RK2KtRtvXOMVVYbWIBDAHqOho3EDAPFe7CfKfMQnysuUU2JtyAk5NX
+7PR73UYZJbW2knSM4byxk/l1P4V1yqQhHmm7LzO+N5bFKinSRvE7I6sjqcFWGCKbV76oAooopgFF
+FFABRRRQAUUUUAFFFFc0tzmluFFFFSSS2t1LZ3CTQtslQ5VsZxXqfhK+n1DQ4Z7iQyyszAsQB0Y+
+lefaL4Zu9dhkktmiAjYKRIxB6fSvRPC+nTaVo8VtcACVWYnacjkk18xnNSjKnyprnT+dtQNWiiiv
+kQCiiigAooooApap/qU/3v6VStLc3VwsY4z1PtUniORo7WIqSp39voawo764hbMczofUGspVlDSx
+7+ElajZHd2unw2nKL83Tc3JqxXAf2xe/8/Uv/fRo/ti9/wCfqX/vo1h7ZFOEnq2d/RXAf2xe/wDP
+1L/30aP7Yvf+fqX/AL6NHtV2F7NnfkhQSTgCuX8UakZJUt4pMxhcvtPBJ7H/AD3rHfVbyRSrXUpU
+8EbzXGa14ilkmMNszRIhwzdCT/hXsZXi6GHrqrVi21tt95lVnHDrmmdWSFBJOAKzn8RafGzKbgEq
+cfKpIP0IFcdNqV1PGUkuJHQ9VLHBqvX09fiObt9Xhb1/4B51TMH9hfeei2lzFqFuZYGEkfQ+3sRV
+SfR/NmBgYJk9D0H0qn4Eml23UXWHhhz0bp/L+VdUsar0FZvPFWouNaHvdLHTGsq1O81qUh4gk0mN
+LVozcPGOZHbGc8/5NexfAXX7nWdL1SKdl228qbI0jwFDA5575I/D8a8D1Kc3F5I27cAdo+gr6V+C
++jxaX4BsZVi8ue83Tysw5b5iF7DjaBj61r7SpKlFTZy4HmninZ6K53VFFFYH04UUUUAFFFFABRRR
+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
+QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFA
+BRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF
+FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVDdWsN9ay29xGssEqlHRhwwPUVNRRsB5nP
+8DdHWWR0mvWWST5Y0kQCJT35BLY+ueO9b+jfC/w9pMNpv0+G8uYFwZ7hd25s53FScZz044rraK6p
+YqtNWcmYRoU4u6iU9V0mz1yxe0vreO5t36pIoIz6j0PvXifiXQj4f1aaxZhLGuCjY6qRkcf56V7x
+XkHxF0W6stdnvHDy21wQyynkA4A2n0x29q0wkrTa7nl5rT5qSmlqn+By0FrFJuDRr+VSf2fBtK7O
+Cc9TVdrr7KM7d27jrimf2tJz8i/rW9ahRlO8oJv0PMw8qns1yvQS6s4oZAF3euCaYQGBBGRUz6hB
+IMmMliMH2qneXS2Gmz30qSfZoEMkjKhOFHU49hXi1MJ7Od6UdH2KqOpUa5tTlr7wtp2n3pkiiyJF
+5icBkXnqM1W/4R3T7y4TzLcLuIX92Svt0HFZt18UNHv9WeLc0cA+WO5IO1/qCMr+VattrNjcPH5F
+5BIzcrskBzjH+IrumsZBXm5J28zovWjrJu5ak8A6U7qQJowBgqsnB9+Qeaq+IvB9jDo80llblLiI
+BhhycgYznPtmt7T9WiuiUkZUkBwATjd9K0GjV1KsoZT1DDIryISzSjVg6tR2Tvq+nn3ucUsfKnL3
+pPQ4WLzWij+0P5soABY47DFaGjWMuqavZWcKK8s8yRqr/dJLAc8dK2brQbebJjzC3+zyPyrY+Gei
+X9n490qeCBbmKOUh3OdqqUYEn0OMke4Fe8q0JJtaHVQxVKvNJOzZ9HwRrDDHGkaxIihRHGMKoA6D
+2qSiivPPpwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKgvrKHUrOW2uF3wyrtZckcfUVPRT21Qmk1ZnnGtfCOKS1mewu5DMuWjilAw3+znj8
+65D/AIVr4hNvHILLLMSDH5ihlwcZOTj9a92orb20+upx/VKS0irHzymgXum6h5d7bNbmPkrIOv09
+a1o9HfX1ksFt/tSzoyPF2KkYIPoMGvarq0hvYTFcRJNGTna4yKqWcOmaLPHZwGC2nuNzpDvAeTHL
+EAnJA9ulJ1HJ3OeWCblfm0PiD4nfAnxJ4P1+RLLRb7UNOkHmpcWdu0sa5P3DtztxkD5sE4rJ8F+H
+73T76aW9tfICrtUTIN4bPbuK/QauW8ZfD3S/GFsxmhSK9VJBDcAH5WYAbmAI3YwOtezSzSXKoVF8
+zor0ZSpuMGfMmh6Nfa/qUNlp0LT3Uh+VV4xjuT2A9a+hPCvwntbG1il1pvt16QN0aMRCh9sYLfjx
+7UvgHQx4J0l4HsVF3G4W9uFDNnIwPK2xkvnCHbxjdnrkV2tnqlrqEKSwTBlc7QrAqwbbu2lTgg45
+wRnFceMrOq7JaLqcuHwNNJSqq7M9fBmhr00q2/FAf89K0NP0uz0mIx2dtFbIeSI1Az7n1q1RXmHp
+RpU4O8YpfIKKKKDUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo
+oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii
+igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKK
+ACiiigAooooAKKKKACiiigAooooAK4vxX4HOreLtG8QpMV/s7b5kManfIofIwR2GWJGOeneu0oqo
+ycXdCaT3OdX4gaG3iJdEN2U1FiAI5EZBkjIGSOvt1roq+Z/jXYXdj8QLu4m+5cqksEirtyoULj6g
+rj8qseG/jpr+ixiK98vV4B0Nx8sg/wCBjr+IJrt+quUVKmYe1s2pH0bLGJonjYsFYFSVYqefQjkH
+3FeL/G+21vSPEmm+INNWSK2t4gPPhUMI5gWyzjHdSoyeOMVga98fde1IPHYw2+mQsGGVBkk5yPvH
+jjI6Acj8K5HVPH/iDV7pZ7jVbncrrIipIVVGUAAqB06A/XnrXrYHAV6c1Ula3ZkTqRkrI+nvBeqz
+614X029uUmS4lhBkE6bWLev3VGD14GOeK2qzvDk8114f0ya4MjTyW0bSNKAHLFRkkDgEn0rRr56p
+bndlbU6lsFFFFZjCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
+KKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooo
+oAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiig
+AooooAKKKKACiiigAooooAKKKKACiiigDhPjL4fs9X8F3d3cRM1zYKZYJEOCpJAI+h4z9K+XL6Zo
+LVnTG4Y6/WvtqeGO6hkhlQSRSKUdGHDAjBBr5Q+NHw5l8C3cTQiW40ud/wBzcMvCHn92x6bsDPbI
+6dDj1MHV5fdvr0OWrC7UjzuLUJ45N28sO6scirNxqxeNfK3RvnngGs2vQvhf8L9b8SeINIvX0uZd
+GWdJpbmZQiNGpBON33s9OAc8+hx6zxM6cXeWhny3Z9UeEfMHhPRfOiaCX7FDvic5ZG8tcqeOorWo
+or5Zu7udwUUUUgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAqtqOm2mr2clrfW0V3bSDDRTIGU/gas0UAYmn+B/Duksj
+WehadbSKoUSR2qB8DHVsZPQda26KKbbe4BRRRSAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiii
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiuJ+K3ijxP4T0GG68Le
+HT4ivGm2SxZJ8tMH5toO5vmx07ZzivCPiZ+0R8UPDK2Uc/hq28MC4g83zJI2nckMyH5idq8gHaQS
+PlOcMKAPq2ivKvgP8Vde+JWl3H9veHJ9Knt1UjUFidLa6yT9wNyCBjIBYd/lyBXqtABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
+FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAR3FxFawvNPKkMSDLSSMFVR6kmpKKKACiiigAooooAKKKKACiiig
+AooooA//2Q==</Data></Thumbnail></Binary></metadata>

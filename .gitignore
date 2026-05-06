@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Claude Code (local worktrees/state)
+.claude/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# --- Pipeline raw inputs not needed at runtime ---
+# These are large files used only to rebuild the database from scratch.
+# The deployed app reads from db/agrimix.duckdb plus the small processed
+# rasters (MAP, pH) and the SLGA raster (LFS-tracked, see .gitattributes).
+data/raw/silo/                  # ~414 MB, 30 yearly netCDF
+data/raw/soilgrids/             # ~26 MB, 3 depth layers
+data/raw/worldclim/             # legacy ~70 MB
+data/raw/bendigo_bank/          # PDF, not used by app
+data/raw/mla/                   # only metadata stub
+data/raw/nrm/                   # ~16 MB shapefile, baked into DB
+
+# Intermediate processed files (already baked into agrimix.duckdb)
+data/processed/*.parquet
+data/processed/nrm_dubbo_north.gpkg
+data/processed/*.bak
+
+# App outputs
+outputs/
+
+# Scratch
+*.log
