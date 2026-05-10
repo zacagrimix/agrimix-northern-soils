@@ -506,8 +506,46 @@ elif region_sel:
 
 st_folium(fmap, height=620, use_container_width=True, returned_objects=[])
 
-# --- Breakdown: group by every dimension that's not single-valued ---
+# --- CSV download (full 4-D rows filtered by current selections) ---
+csv_filters, csv_params = [], []
+for col, vals in [
+    ("nrm_region", region_sel),
+    ("soil_name", soil_sel),
+    ("rain_band_label", band_sel),
+    ("ph_band_label", ph_sel),
+]:
+    clause, p = in_clause(col, vals)
+    if clause:
+        csv_filters.append(clause)
+        csv_params.extend(p)
+csv_where = "WHERE " + " AND ".join(["hectares > 0"] + csv_filters)
+csv_df = con.execute(
+    f"""SELECT
+            nrm_region   AS "Region",
+            soil_name    AS "Soil order",
+            rain_band_label AS "Rainfall band",
+            ph_band_label AS "pH band",
+            ROUND(hectares)::BIGINT AS "Hectares"
+        FROM soil_rain_ph_coarse
+        {csv_where}
+        ORDER BY hectares DESC""",
+    csv_params,
+).fetchdf()
+
 st.subheader("Breakdown")
+dl_col1, dl_col2 = st.columns([3, 1])
+dl_col1.caption(
+    f"{len(csv_df):,} non-zero rows matching your filters · "
+    f"{int(csv_df['Hectares'].sum()):,} ha total"
+)
+dl_col2.download_button(
+    label="Download CSV",
+    data=csv_df.to_csv(index=False).encode("utf-8"),
+    file_name="agrimix-northern-soils-lookup.csv",
+    mime="text/csv",
+    use_container_width=True,
+)
+
 group_cols = []
 dims = [
     ("nrm_region", region_sel),
