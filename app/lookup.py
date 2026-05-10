@@ -240,6 +240,31 @@ SOIL_RGBA = (200, 30, 30, 220)        # red — single-soil pixel highlight
 RAIN_RGBA = (30, 90, 200, 200)        # blue — single-band pixel highlight
 PH_RGBA = (60, 170, 60, 220)          # green — single-pH pixel highlight
 
+# Characteristic surface→subsoil texture for each ASC Soil Order.
+# These are typical tendencies (Isbell 2002 / NSOTL); individual profiles vary.
+SOIL_TEXTURE = {
+    "Vertosol":    "clay",
+    "Sodosol":     "loam over sodic clay",
+    "Dermosol":    "clay loam over clay",
+    "Chromosol":   "loam over clay",
+    "Ferrosol":    "friable clay",
+    "Kurosol":     "loam over acid clay",
+    "Tenosol":     "sand / sandy loam",
+    "Kandosol":    "loam (massive earth)",
+    "Hydrosol":    "wet (often clay)",
+    "Podosol":     "sand",
+    "Rudosol":     "variable / skeletal",
+    "Calcarosol":  "calcareous loam",
+    "Organosol":   "peat",
+    "Anthroposol": "man-modified",
+}
+
+
+def soil_label(name: str) -> str:
+    """e.g. 'Vertosol' -> 'Vertosol (clay)'."""
+    tex = SOIL_TEXTURE.get(name)
+    return f"{name} ({tex})" if tex else name
+
 DISTINCT_RGBA = [
     (228, 26, 28, 220), (55, 126, 184, 220), (77, 175, 74, 220),
     (152, 78, 163, 220), (255, 127, 0, 220), (255, 217, 47, 220),
@@ -292,7 +317,12 @@ regions, soils, bands, phs = get_options()
 
 c1, c2, c3, c4 = st.columns(4)
 region_sel = c1.multiselect("Region(s)", regions, placeholder="All regions")
-soil_sel = c2.multiselect("Soil order(s)", soils, placeholder="All soils")
+soil_sel = c2.multiselect(
+    "Soil order(s)",
+    soils,
+    placeholder="All soils",
+    format_func=soil_label,
+)
 band_sel = c3.multiselect("Rainfall band(s)", bands, placeholder="All bands")
 ph_sel = c4.multiselect("pH band(s)", phs, placeholder="All pH bands")
 
@@ -425,8 +455,8 @@ if soil_sel or band_sel or ph_sel:
             ((soil_codes_map[s],), band_ranges_t, ph_ranges_t, palette[i])
             for i, s in enumerate(soil_sel)
         )
-        layer_labels = list(soil_sel)
-        legend_items = list(zip(soil_sel, palette))
+        layer_labels = [soil_label(s) for s in soil_sel]
+        legend_items = list(zip(layer_labels, palette))
     elif color_by_band:
         palette = _pick_palette(len(band_sel), "sequential_blue")
         layers_t = tuple(
@@ -446,7 +476,8 @@ if soil_sel or band_sel or ph_sel:
     else:
         if soil_sel:
             single_color = SOIL_RGBA
-            label = (", ".join(soil_sel) if len(soil_sel) <= 3
+            label = (", ".join(soil_label(s) for s in soil_sel)
+                     if len(soil_sel) <= 3
                      else f"{len(soil_sel)} soils")
         elif band_sel:
             single_color = RAIN_RGBA
@@ -531,6 +562,9 @@ csv_df = con.execute(
         ORDER BY hectares DESC""",
     csv_params,
 ).fetchdf()
+csv_df.insert(
+    2, "Texture", csv_df["Soil order"].map(SOIL_TEXTURE).fillna("")
+)
 
 st.subheader("Breakdown")
 dl_col1, dl_col2 = st.columns([3, 1])
@@ -584,6 +618,8 @@ def _render_nested(df, group_cols, parent_total):
         out = totals.reset_index()
         out["pct"] = out["hectares"] / parent_total * 100
         out.columns = [PRETTY_COL.get(col, col), "Hectares", "% of parent"]
+        if col == "soil_name":
+            out.iloc[:, 0] = out.iloc[:, 0].apply(soil_label)
         out["Hectares"] = out["Hectares"].apply(lambda x: f"{int(round(x)):,}")
         out["% of parent"] = out["% of parent"].apply(lambda x: f"{x:.1f}%")
         st.dataframe(out, use_container_width=True, hide_index=True)
@@ -591,8 +627,9 @@ def _render_nested(df, group_cols, parent_total):
 
     for value, sub_total in totals.items():
         pct = sub_total / parent_total * 100 if parent_total > 0 else 0
+        display = soil_label(value) if col == "soil_name" else value
         label = (
-            f"**{value}** — {int(round(sub_total)):,} ha ({pct:.1f}%)"
+            f"**{display}** — {int(round(sub_total)):,} ha ({pct:.1f}%)"
         )
         with st.expander(label):
             sub = df[df[col] == value]
@@ -627,6 +664,8 @@ else:
         out["pct"] = out["hectares"] / total * 100
         out.columns = [PRETTY_COL.get(c, c) for c in out.columns[:-2]] + \
             ["Hectares", "% of total"]
+        if group_cols[0] == "soil_name":
+            out.iloc[:, 0] = out.iloc[:, 0].apply(soil_label)
         out["Hectares"] = out["Hectares"].apply(lambda x: f"{int(round(x)):,}")
         out["% of total"] = out["% of total"].apply(lambda x: f"{x:.1f}%")
         st.dataframe(out, use_container_width=True, hide_index=True)
