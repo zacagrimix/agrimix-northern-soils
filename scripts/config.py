@@ -37,14 +37,18 @@ ASC_LEGEND = {
     14: "Anthroposol",
 }
 
-# ---- Coarse rainfall bands (the original 6-band classification) ----
+# ---- Coarse rainfall bands (100 mm increments, with a <250 catch-all) ----
 COARSE_RAIN_BANDS = [
-    ("<250 mm",     0,    250),
-    ("250-350 mm",  250,  350),
-    ("350-500 mm",  350,  500),
-    ("500-750 mm",  500,  750),
-    ("750-1000 mm", 750,  1000),
-    (">1000 mm",    1000, 99999),
+    ("<250 mm",      0,    250),
+    ("250-350 mm",   250,  350),
+    ("350-450 mm",   350,  450),
+    ("450-550 mm",   450,  550),
+    ("550-650 mm",   550,  650),
+    ("650-750 mm",   650,  750),
+    ("750-850 mm",   750,  850),
+    ("850-950 mm",   850,  950),
+    ("950-1000 mm",  950,  1000),
+    (">1000 mm",     1000, 99999),
 ]
 
 # ---- Fine rainfall bands (50 mm increments, <50 to >2000) ----
