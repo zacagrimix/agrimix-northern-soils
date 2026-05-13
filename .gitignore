@@ -26,12 +26,13 @@ Thumbs.db
 # These are large files used only to rebuild the database from scratch.
 # The deployed app reads from db/agrimix.duckdb plus the small processed
 # rasters (MAP, pH) and the SLGA raster (LFS-tracked, see .gitattributes).
-data/raw/silo/                  # ~414 MB, 30 yearly netCDF
-data/raw/soilgrids/             # ~26 MB, 3 depth layers
-data/raw/worldclim/             # legacy ~70 MB
-data/raw/bendigo_bank/          # PDF, not used by app
-data/raw/mla/                   # only metadata stub
-data/raw/nrm/                   # ~16 MB shapefile, baked into DB
+data/raw/silo/
+data/raw/soilgrids/
+data/raw/worldclim/
+data/raw/bendigo_bank/
+data/raw/mla/
+data/raw/nrm/
+data/raw/nlum/
 
 # Intermediate processed files (already baked into agrimix.duckdb)
 data/processed/*.parquet

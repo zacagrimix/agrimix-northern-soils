@@ -13,7 +13,7 @@ from shapely.geometry import mapping
 from streamlit_folium import st_folium
 
 from colored_layer_control import ColoredLayerControl
-from overlay import render_overlay
+from overlay import NLUM_COLOR, render_nlum_overlay, render_overlay
 
 DB = Path(__file__).resolve().parent.parent / "db" / "agrimix.duckdb"
 
@@ -219,6 +219,18 @@ def get_ph_bounds():
 
 
 @st.cache_data
+def get_nlum_classes():
+    """Return [(code, label, is_managed), ...] from the nlum_classes lookup."""
+    try:
+        rows = get_con().execute(
+            "SELECT code, label, is_managed FROM nlum_classes ORDER BY code"
+        ).fetchall()
+        return [(int(r[0]), r[1], bool(r[2])) for r in rows]
+    except Exception:
+        return []  # DB doesn't have NLUM yet (pre-pipeline-rerun)
+
+
+@st.cache_data
 def get_options():
     con = get_con()
     regions = [r[0] for r in con.execute(
@@ -299,8 +311,17 @@ def _pick_palette(n, kind):
 
 
 @st.cache_data(max_entries=40, show_spinner="Rendering map overlay…")
-def cached_overlay(region_wkts, layers_t):
-    return render_overlay(region_geom_wkts=region_wkts, layers=layers_t)
+def cached_overlay(region_wkts, layers_t, nlum_codes_filter=()):
+    return render_overlay(
+        region_geom_wkts=region_wkts,
+        layers=layers_t,
+        nlum_codes_filter=nlum_codes_filter,
+    )
+
+
+@st.cache_data(max_entries=20, show_spinner="Rendering land-use layer…")
+def cached_nlum_overlay(region_wkts):
+    return render_nlum_overlay(region_geom_wkts=region_wkts)
 
 
 def fmt_selection(label, selected, total_options):
@@ -326,11 +347,28 @@ soil_sel = c2.multiselect(
 band_sel = c3.multiselect("Rainfall band(s)", bands, placeholder="All bands")
 ph_sel = c4.multiselect("pH band(s)", phs, placeholder="All pH bands")
 
-shade_regions = st.checkbox(
-    "Shade regions by hectares (choropleth)",
+opt_a, opt_b, opt_c = st.columns([2, 2, 2])
+shade_regions = opt_a.checkbox(
+    "Shade regions by hectares",
     value=False,
-    help="Off: regions show only outlines. On: regions are tinted by total "
-         "hectares of the selected soil + rainfall + pH combination.",
+    help="Tint each region polygon by total hectares matching your filters.",
+)
+nlum_classes = get_nlum_classes()
+nlum_available = bool(nlum_classes)
+exclude_unmanaged = opt_b.checkbox(
+    "Exclude non-grazing land",
+    value=False,
+    disabled=not nlum_available,
+    help="Remove pixels classed by ABARES NLUM as Conservation, Intensive "
+         "use, or Water from totals and the breakdown. Source = ABARES "
+         "Catchment Scale Land Use of Australia (2020 release).",
+)
+show_landuse = opt_c.checkbox(
+    "Show land-use overlay on map",
+    value=False,
+    disabled=not nlum_available,
+    help="Tint every pixel by its NLUM Primary class. Useful for seeing "
+         "where parks / cropping / urban actually sit.",
 )
 
 con = get_con()
@@ -345,17 +383,35 @@ def in_clause(col, values):
 
 # When pH is in the filter, query the 4-D cube; otherwise use the original 3-D.
 USE_PH_CUBE = bool(ph_sel)
-fact_table = "soil_rain_ph_coarse" if USE_PH_CUBE else "soil_rain_coarse"
-rain_col = "rain_band_label" if USE_PH_CUBE else "band_label"
-rain_idx_col = "rain_band_idx" if USE_PH_CUBE else "band_idx"
+# When the user wants non-grazing land excluded, the 5-D NLUM cube is the
+# source of truth (only it has the nlum_code column to filter on).
+USE_NLUM_CUBE = exclude_unmanaged and nlum_available
+if USE_NLUM_CUBE:
+    fact_table = "soil_rain_ph_nlum_coarse"
+    rain_col = "rain_band_label"
+    rain_idx_col = "rain_band_idx"
+    # 2 = Grazing native veg, 3 = Dryland ag, 4 = Irrigated ag
+    fixed_filters: list[str] = ["nlum_code IN (2, 3, 4)"]
+elif USE_PH_CUBE:
+    fact_table = "soil_rain_ph_coarse"
+    rain_col = "rain_band_label"
+    rain_idx_col = "rain_band_idx"
+    fixed_filters = []
+else:
+    fact_table = "soil_rain_coarse"
+    rain_col = "band_label"
+    rain_idx_col = "band_idx"
+    fixed_filters = []
+# pH filter is only meaningful when querying a cube that has pH dimension.
+HAS_PH_DIM = USE_NLUM_CUBE or USE_PH_CUBE
 
 # --- Total hectares matching all filters ---
-filters, params = [], []
+filters, params = list(fixed_filters), []
 for col, vals in [
     ("nrm_region", region_sel),
     ("soil_name", soil_sel),
     (rain_col, band_sel),
-    ("ph_band_label", ph_sel) if USE_PH_CUBE else (None, []),
+    ("ph_band_label", ph_sel) if HAS_PH_DIM else (None, []),
 ]:
     if col is None:
         continue
@@ -371,19 +427,22 @@ total = con.execute(
 
 m1, m2 = st.columns([1, 3])
 m1.metric("Hectares matching", f"{total:,.0f} ha")
-m2.caption(" · ".join([
+caption_bits = [
     fmt_selection("Region", region_sel, len(regions)),
     fmt_selection("Soil", soil_sel, len(soils)),
     fmt_selection("Rainfall", band_sel, len(bands)),
     fmt_selection("pH", ph_sel, len(phs)),
-]))
+]
+if USE_NLUM_CUBE:
+    caption_bits.append("Land use: **grazing/cropping only**")
+m2.caption(" · ".join(caption_bits))
 
 # --- Choropleth: ha per region for selected (soil, band, pH) ---
-map_filters, map_params = [], []
+map_filters, map_params = list(fixed_filters), []
 for col, vals in [
     ("soil_name", soil_sel),
     (rain_col, band_sel),
-    ("ph_band_label", ph_sel) if USE_PH_CUBE else (None, []),
+    ("ph_band_label", ph_sel) if HAS_PH_DIM else (None, []),
 ]:
     if col is None:
         continue
@@ -535,10 +594,53 @@ elif region_sel:
         ys = [c[1] for c in coords]
         fmap.fit_bounds([[min(ys), min(xs)], [max(ys), max(xs)]])
 
+# --- Land-use overlay (toggleable, on top of choropleth, under filter pixels) ---
+if show_landuse and nlum_available:
+    region_wkts_for_nlum = tuple(geoms[r]["wkt"] for r in region_sel)
+    nlum_rgba, nlum_bounds = cached_nlum_overlay(region_wkts_for_nlum)
+    folium.raster_layers.ImageOverlay(
+        image=nlum_rgba,
+        bounds=nlum_bounds,
+        opacity=0.65,
+        interactive=False,
+        cross_origin=False,
+        name="Land use (NLUM)",
+        overlay=True,
+        control=False,
+    ).add_to(fmap)
+
 st_folium(fmap, height=620, use_container_width=True, returned_objects=[])
 
-# --- CSV download (full 4-D rows filtered by current selections) ---
-csv_filters, csv_params = [], []
+# Static legend for the land-use overlay (when shown).
+if show_landuse and nlum_available:
+    def _nlum_rgba_css(code):
+        c = NLUM_COLOR.get(code, (160, 160, 160, 180))
+        return f"rgba({c[0]},{c[1]},{c[2]},{c[3] / 255:.2f})"
+
+    chips = "&nbsp;&nbsp;".join(
+        f'<span style="display:inline-block;width:16px;height:16px;'
+        f'background:{_nlum_rgba_css(code)};border:1px solid #555;'
+        f'vertical-align:middle;margin-right:6px;"></span>'
+        f'<span style="vertical-align:middle;margin-right:14px;">{lbl}</span>'
+        for code, lbl, _ in nlum_classes
+    )
+    st.markdown(
+        "**Land-use overlay legend:** " + chips,
+        unsafe_allow_html=True,
+    )
+
+# --- CSV download ---
+# Always source from the 5-D NLUM cube when available (it has all dimensions).
+# Filter to managed land if the user ticked "Exclude non-grazing land".
+if nlum_available:
+    csv_table = "soil_rain_ph_nlum_coarse"
+    csv_extra_cols = ", nlum_label AS \"Land use\""
+    csv_extra_filters = ["nlum_code IN (2, 3, 4)"] if exclude_unmanaged else []
+else:
+    csv_table = "soil_rain_ph_coarse"
+    csv_extra_cols = ""
+    csv_extra_filters = []
+csv_filters, csv_params = list(csv_extra_filters), []
 for col, vals in [
     ("nrm_region", region_sel),
     ("soil_name", soil_sel),
@@ -555,9 +657,9 @@ csv_df = con.execute(
             nrm_region   AS "Region",
             soil_name    AS "Soil order",
             rain_band_label AS "Rainfall band",
-            ph_band_label AS "pH band",
+            ph_band_label AS "pH band"{csv_extra_cols},
             ROUND(hectares)::BIGINT AS "Hectares"
-        FROM soil_rain_ph_coarse
+        FROM {csv_table}
         {csv_where}
         ORDER BY hectares DESC""",
     csv_params,
@@ -586,7 +688,7 @@ dims = [
     ("soil_name", soil_sel),
     (rain_col, band_sel),
 ]
-if USE_PH_CUBE:
+if HAS_PH_DIM:
     dims.append(("ph_band_label", ph_sel))
 for col, sel in dims:
     if len(sel) != 1:
@@ -642,7 +744,7 @@ else:
     extras = []
     if rain_col in group_cols:
         extras.append(rain_idx_col)
-    if "ph_band_label" in group_cols and USE_PH_CUBE:
+    if "ph_band_label" in group_cols and HAS_PH_DIM:
         extras.append("ph_band_idx")
     extra_sel = (", " + ", ".join(extras)) if extras else ""
 
@@ -693,6 +795,7 @@ North West NSW, Western, Central West) whose centroid is at or north of Dubbo.
 | Soil order (ASC) | [TERN/CSIRO SLGA v1 — Australian Soil Classification Map (Searle 2021)](https://doi.org/10.25919/vkjn-3013) | 90 m (3 arc-sec) | Modelled, multi-vintage | CC-BY 4.0 |
 | Mean annual rainfall | [SILO — Queensland Government / BoM gridded climate data](https://www.longpaddock.qld.gov.au/silo/) | 0.05° (~5.5 km) | 1991–2020 climatology | CC-BY 4.0 |
 | Soil pH (water, 0–30 cm) | [ISRIC SoilGrids 2.0 — `phh2o`, depth-weighted aggregate](https://www.isric.org/explore/soilgrids) | 250 m → resampled ~500 m | 2020 release | CC-BY 4.0 |
+| Land use (NLUM Primary) | [ABARES — Catchment Scale Land Use of Australia (Update Dec 2020)](https://www.agriculture.gov.au/abares/aclump/catchment-scale-land-use-of-australia-update-december-2020) | 50 m → resampled ~220 m | Dec 2020 release | CC-BY 4.0 |
 | NRM region polygons | [Australian Government DCCEEW — NRM Regions 2020](https://data.gov.au/dataset/ds-dga-nrm-regions-2020) | Vector | 2020 | CC-BY 4.0 |
 
 **Software & libraries**
@@ -706,7 +809,8 @@ Thanks to:
 - **ISRIC — World Soil Information** for the SoilGrids 2.0 global product
 - **Queensland Government — Long Paddock / SILO** and the **Australian Bureau of Meteorology** for the gridded rainfall climatology
 - **DCCEEW** (Dept of Climate Change, Energy, the Environment and Water) for the NRM Regions 2020 boundaries
+- **ABARES** (Australian Bureau of Agricultural and Resource Economics and Sciences) for the NLUM land-use raster
 - **Open-source geospatial community** — DuckDB, Streamlit, Folium/Leaflet, rasterio, shapely, pandas, GDAL
 
-**Caveats** — see [README](https://github.com/) for full list. Most relevant: SLGA pixel-level accuracy ~61% (highest in mapped cropping/grazing zones); SoilGrids pH is a global model with limited Australian station density; SILO 1991–2020 has thinner station coverage in the WA/NT pastoral interior.
+**Caveats** — see [README](https://github.com/) for full list. Most relevant: SLGA pixel-level accuracy ~61% (highest in mapped cropping/grazing zones); SoilGrids pH is a global model with limited Australian station density; SILO 1991–2020 has thinner station coverage in the WA/NT pastoral interior; NLUM is mapped at catchment scale (50 m source, resampled to ~220 m for the app) so park edges are approximate, and the 2020 release pre-dates some recent IPA declarations.
     """)

@@ -28,13 +28,25 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 SLGA_PATH = PROJECT_ROOT / "data" / "raw" / "slga" / "ASC_EV_C_P_AU_TRN_N.cog.tif"
 MAP_PATH = PROJECT_ROOT / "data" / "processed" / "MAP_aus_2.5min.tif"
 PH_PATH = PROJECT_ROOT / "data" / "processed" / "pH_water_0-30cm_north_500m.tif"
+NLUM_PATH = PROJECT_ROOT / "data" / "processed" / "nlum_primary_north_100m.tif"
 
 NORTH_AUS_BBOX = (113.0, -33.0, 154.0, -10.0)
+
+# NLUM Primary class colors (matches scripts.config.NLUM_PRIMARY ordering).
+NLUM_COLOR = {
+    1: (140,  70, 130, 200),   # Conservation — purple
+    2: (180, 140,  60, 180),   # Grazing native veg — tan
+    3: (220, 200,  60, 180),   # Dryland ag — yellow
+    4: ( 70, 140, 200, 200),   # Irrigated ag — blue
+    5: (120, 120, 120, 200),   # Intensive — grey
+    6: ( 30, 100, 180, 220),   # Water — deep blue
+}
 
 
 def render_overlay(
     region_geom_wkts: tuple[str, ...] = (),
     layers: tuple[tuple, ...] = (),
+    nlum_codes_filter: tuple[int, ...] = (),
     max_px: int = 800,
 ) -> tuple[list[np.ndarray], list[list[float]]]:
     """Return (per_layer_rgbas, [[south, west], [north, east]]).
@@ -43,6 +55,10 @@ def render_overlay(
     Returns one RGBA image per layer (same order as input). Pixels matching
     that layer's filters AND the region polygon are painted; everything else
     in that layer is transparent.
+
+    `nlum_codes_filter` (optional): if non-empty, restricts every layer's
+    matching pixels to those whose NLUM Primary land-use code is in the set.
+    Empty = no NLUM filter.
     """
     if region_geom_wkts:
         geoms = [shapely.wkt.loads(w) for w in region_geom_wkts]
@@ -98,6 +114,20 @@ def render_overlay(
                 dst_nodata=-32768,
             )
 
+    nlum = None
+    if nlum_codes_filter and NLUM_PATH.exists():
+        with rasterio.open(NLUM_PATH) as nsrc:
+            nlum = np.empty((out_h, out_w), dtype=np.uint8)
+            reproject(
+                source=rasterio.band(nsrc, 1),
+                destination=nlum,
+                dst_transform=out_transform,
+                dst_crs="EPSG:4326",
+                resampling=Resampling.nearest,
+                src_nodata=0,
+                dst_nodata=0,
+            )
+
     region_mask = None
     if region_geom is not None:
         region_mask = geometry_mask(
@@ -130,6 +160,10 @@ def render_overlay(
                 pmask |= (ph_x10 >= lo_x10) & (ph_x10 < hi_x10)
             mask &= pmask & (ph_x10 != -32768)
 
+        if nlum is not None:
+            nlum_arr_codes = np.asarray(nlum_codes_filter, dtype=nlum.dtype)
+            mask &= np.isin(nlum, nlum_arr_codes)
+
         if region_mask is not None:
             mask &= region_mask
 
@@ -139,3 +173,62 @@ def render_overlay(
 
     bounds = [[miny, minx], [maxy, maxx]]
     return per_layer_rgba, bounds
+
+
+def render_nlum_overlay(
+    region_geom_wkts: tuple[str, ...] = (),
+    max_px: int = 800,
+) -> tuple[np.ndarray, list[list[float]]]:
+    """Render the NLUM Primary land-use raster as a categorical RGBA overlay.
+
+    One pixel per land-use class, coloured per `NLUM_COLOR`. Used by the map
+    as a toggleable "Land use" layer (independent of any soil/rain/pH filter).
+
+    Returns (rgba_uint8, [[south, west], [north, east]]).
+    """
+    if region_geom_wkts:
+        geoms = [shapely.wkt.loads(w) for w in region_geom_wkts]
+        region_geom = (
+            geoms[0] if len(geoms) == 1 else shapely.ops.unary_union(geoms)
+        )
+        minx, miny, maxx, maxy = region_geom.bounds
+        pad = 0.1
+        minx, miny = minx - pad, miny - pad
+        maxx, maxy = maxx + pad, maxy + pad
+    else:
+        region_geom = None
+        minx, miny, maxx, maxy = NORTH_AUS_BBOX
+
+    out_w = max_px
+    out_h = max(1, int(out_w * (maxy - miny) / (maxx - minx)))
+    if out_h > max_px:
+        out_h = max_px
+        out_w = max(1, int(out_h * (maxx - minx) / (maxy - miny)))
+    out_transform = transform_from_bounds(minx, miny, maxx, maxy, out_w, out_h)
+
+    with rasterio.open(NLUM_PATH) as nsrc:
+        nlum = np.empty((out_h, out_w), dtype=np.uint8)
+        reproject(
+            source=rasterio.band(nsrc, 1),
+            destination=nlum,
+            dst_transform=out_transform,
+            dst_crs="EPSG:4326",
+            resampling=Resampling.nearest,
+            src_nodata=0,
+            dst_nodata=0,
+        )
+
+    rgba = np.zeros((out_h, out_w, 4), dtype=np.uint8)
+    for code, color in NLUM_COLOR.items():
+        rgba[nlum == code] = color
+
+    if region_geom is not None:
+        inside = geometry_mask(
+            [shapely.geometry.mapping(region_geom)],
+            transform=out_transform,
+            invert=True,
+            out_shape=(out_h, out_w),
+        )
+        rgba[~inside] = 0
+
+    return rgba, [[miny, minx], [maxy, maxx]]

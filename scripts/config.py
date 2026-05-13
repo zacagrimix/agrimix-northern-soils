@@ -15,6 +15,7 @@ WORLDCLIM_DIR = RAW / "worldclim"
 
 MAP_RASTER = PROCESSED / "MAP_aus_2.5min.tif"      # Built by 01_build_map_grid.py
 NRM_DUBBO_NORTH = PROCESSED / "nrm_dubbo_north.gpkg"  # Built by 03_select_regions.py
+NLUM_RASTER = PROCESSED / "nlum_primary_north_100m.tif"  # Built by 09_download_nlum.py
 
 # ---- Region selection ----
 DUBBO_LATITUDE = -32.25  # Approximate latitude of Dubbo, NSW
@@ -60,6 +61,18 @@ def fine_rain_bands(step=50, low=0, high=2000):
     return bands
 
 FINE_RAIN_BANDS = fine_rain_bands()
+
+# ---- NLUM Primary Land Use Classes (ALUM Primary, code = value // 100) ----
+# (code, label, managed_for_grazing_or_cropping)
+NLUM_PRIMARY = [
+    (1, "Conservation & natural environments", False),
+    (2, "Grazing native vegetation",            True),
+    (3, "Dryland agriculture & plantations",    True),
+    (4, "Irrigated agriculture & plantations",  True),
+    (5, "Intensive uses (urban, mining)",       False),
+    (6, "Water",                                 False),
+]
+NLUM_MANAGED_CODES = tuple(c for c, _, m in NLUM_PRIMARY if m)  # (2, 3, 4)
 
 # ---- WGS84 ellipsoid for accurate pixel area calculation ----
 EARTH_RADIUS_EQ = 6378137.0
